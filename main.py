@@ -1,29 +1,10 @@
-def mergeSorted(l1, l2):
-	mergedArray = []
-	f1, f2 = 0, 0
-	
-	if (len(l1) == 0):
-		return l2
+def firstRecChar(list1):
+	set1 = set({})
+	for i in list1:
+		if i in set1:
+			return i
+		set1.add(i)
+	return None
 
-	if (len(l2) == 0):
-		return l2
-
-	while (f1 < len(l1) and f2 < len(l2)):
-		if (l1[f1] < l2[f2]):
-			mergedArray.append(l1[f1])
-			f1 += 1
-		else:
-			mergedArray.append(l2[f2])
-			f2 += 1
-
-	while (f1 < len(l1)):
-		mergedArray.append(l1[f1])
-		f1 += 1
-
-	while (f2 < len(l2)):
-		mergedArray.append(l2[f2])
-		f2 += 1
-
-	return mergedArray
-
-print(mergeSorted([0, 3, 4, 31], [4, 6, 30, 70]))
+print(firstRecChar([2,5,1,2,3,5,1,2,4]))
+print(firstRecChar([2,3,4,5]))
