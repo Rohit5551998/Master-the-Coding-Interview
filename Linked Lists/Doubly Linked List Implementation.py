@@ -77,7 +77,7 @@ class DoublyLinkedList:
             print(temp.data , end = ' ')
             temp = temp.next
         print()
-        print('Length ' + str(self.length))        
+        print('Length ' + str(self.length))      
             
         
 d = DoublyLinkedList()

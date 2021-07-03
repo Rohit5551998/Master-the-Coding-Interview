@@ -68,6 +68,20 @@ class LinkedList:
 			currentNode = currentNode.next
 		return print(f'{array1} with length {self.length}')
 
+	def reverse(self):
+		if (not self.head.next):
+			return self.head
+
+		else:
+			curr = self.head
+			self.tail = self.head
+			while(curr.next is not None):
+				temp = curr.next
+				curr.next = curr.next.next
+				temp.next = self.head
+				self.head = temp
+			return self.head
+
 ll = LinkedList(10)
 ll.append(5)
 ll.append(16)
