@@ -88,15 +88,4 @@ ll.append(16)
 ll.prepend(1)
 ll.insert(4, 99)
 ll.remove(4)
-ll.printList()class LinkedList:
-	def __init__(self, val):
-		self.head = {
-			"value": val,
-			"next": None 
-		}
-		self.tail = self.head
-		self.length = 1
-
-ll = LinkedList(10)
-
-print(ll)
+ll.printList()
