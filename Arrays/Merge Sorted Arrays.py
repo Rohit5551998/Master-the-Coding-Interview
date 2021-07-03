@@ -6,7 +6,7 @@ def mergeSorted(l1, l2):
 		return l2
 
 	if (len(l2) == 0):
-		return l2
+		return l1
 
 	while (f1 < len(l1) and f2 < len(l2)):
 		if (l1[f1] < l2[f2]):
