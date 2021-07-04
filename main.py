@@ -1,14 +1,16 @@
-def memoizedAddto80():
+def fibonacciMaster():
 	cache = {}
-	def innerMemoized(n):
+	def fiboInner(n):
 		if (n in cache):
 			return cache[n]
 		else:
-			print("Long Time")
-			cache[n] = n + 80
-			return cache[n]
-	return innerMemoized
+			if (n < 2):
+				cache[n] = n
+				return n
+			else:
+				cache[n] = fiboInner(n-1) + fiboInner(n-2)
+				return cache[n]
+	return fiboInner
 
-memoized = memoizedAddto80()
-print('1', memoized(5))
-print('2', memoized(5))
+fibo = fibonacciMaster()
+print(fibo(60))
