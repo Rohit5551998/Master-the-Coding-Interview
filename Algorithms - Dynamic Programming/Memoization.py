@@ -2,6 +2,7 @@ def memoizedAddto80():
 	cache = {}
 	def innerMemoized(n):
 		if (n in cache):
+			print("Short Time")
 			return cache[n]
 		else:
 			print("Long Time")
